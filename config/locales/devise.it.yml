@@ -1,0 +1,60 @@
+it:
+  devise:
+    confirmations:
+      approved: Grazie per aver verificato il tuo indirizzo email! <br/>Ora puoi accedere ai contenuti.
+      confirmed: Grazie per aver verificato il tuo indirizzo email! <br/>La tua richiesta è in corso di validazione.<br/>A breve riceverai email di conferma iscrizione.
+      send_instructions: Riceverai un messaggio email con le istruzioni per confermare il tuo account entro qualche minuto.
+      send_paranoid_instructions: Se la tua e-mail esiste nel nostro database, riceverai un messaggio email con le istruzioni per confermare il tuo account entro qualche minuto.
+    failure:
+      already_authenticated: Hai già effettuato l'accesso.
+      inactive: "Il tuo account non è attivo."
+      invalid: "Le credenziali d'accesso non sono valide <br> %{authentication_keys} o password errata. <br> Puoi richedere un reset password selezionando 'Hai dimenticato la tua password'"
+      locked: Il tuo account è bloccato.
+      last_attempt: Hai un altro tentativo prima che il tuo account venga bloccato.
+      not_found_in_database: '%{authentication_keys} o password non validi.'
+      timeout: La tua sessione è scaduta, accedi nuovamente per continuare.
+      unauthenticated: Devi accedere o registrarti per continuare.
+      unconfirmed: "Per completare la registrazione controlla la tua casella di posta e clicca sul link per confermare l’indirizzo mail.<br>Puoi richiedere un nuovo link selezionando 'Invia nuovamente conferma email'"
+      deactivated: Il tuo account non è più attivo. Per ulteriori informazioni o per riattivarlo contatta assistenza@prex.it
+    mailer:
+      confirmation_instructions:
+        subject: Istruzioni per la conferma
+      reset_password_instructions:
+        subject: Istruzioni per reimpostare la password
+      unlock_instructions:
+        subject: Istruzioni per sbloccare l'account
+    omniauth_callbacks:
+      failure: Non è stato possibile autorizzarti da %{kind} perchè %{reason}.
+      success: Autorizzato con successo dall'account %{kind}.
+    passwords:
+      no_token: Puoi accedere a questa pagina solamente dalla email di reset della password. Se vieni dalla email controlla di aver inserito l'url completo riportato nella email.
+      send_instructions: Ti abbiamo inviato una mail con il link e  le istruzioni per modificare la password. Controlla la tua mailbox per proseguire.
+      send_paranoid_instructions: Se la tua e-mail esiste nel nostro database, riceverai un messaggio email contentente un link per il ripristino della password
+      updated: La tua password è stata cambiata.
+      updated_not_active: La tua password è stata cambiata.
+    registrations:
+      destroyed: Arrivederci! L'account è stato cancellato. Speriamo di rivederci presto.
+      signed_up: Grazie, la tua registrazione è stata presa in carico, controlla la tua casella di posta per confermare l'indirizzo email.
+      signed_up_but_inactive: Grazie, la tua registrazione è stata presa in carico, controlla la tua casella di posta per confermare l'indirizzo email.
+      signed_up_but_locked: Iscrizione eseguita correttamente. Però non puoi accedere in quanto il tuo account è bloccato.
+      signed_up_but_unconfirmed: Grazie, la tua registrazione è stata presa in carico, controlla la tua casella di posta per confermare l'indirizzo email.
+      update_needs_confirmation: Il tuo account è stato aggiornato, ma dobbiamo verificare la tua email. Ti invitiamo a consultare la tua email e cliccare sul link di conferma.
+      updated: Il tuo account è stato aggiornato.
+    sessions:
+      already_signed_out: ''
+      signed_in: ''
+      signed_out: ''
+    unlocks:
+      send_instructions: Riceverai un messaggio email con le istruzioni per sbloccare il tuo account entro qualche minuto.
+      send_paranoid_instructions: Se la tua e-mail esiste nel nostro database, riceverai un messaggio email con le istruzioni per sbloccare il tuo account entro qualche minuto.
+      unlocked: Il tuo account è stato correttamente sbloccato. Ora sei collegato.
+  errors:
+    messages:
+      already_confirmed: è stato già confermato
+      confirmation_period_expired: deve essere confermato entro %{period}, richiedi una nuova conferma
+      expired: è scaduto, si prega di richiederne uno nuovo
+      not_found: non trovato
+      not_locked: non era bloccato
+      not_saved:
+        one: "Un errore ha impedito di proseguire:"
+        other: "%{count} errori hanno impedito di proseguire:"

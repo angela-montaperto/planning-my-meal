@@ -1,0 +1,17 @@
+<tr class="align-middle">
+  <td><%=
+   #active_icon(user.active)
+   %></td>
+  <td><%= user.name %></td>
+  <td><%= user.surname %></td>
+  <td><%= user.email %></td>
+  <td><%= user.role %></td>
+  <td>
+    <%= link_to edit_admin_user_path(user), class: "text-decoration-none text-primary me-2" do %>
+    <i class="fa-solid fa-pen-to-square" title="Modifica"></i>
+    <% end %>
+    <%= link_to admin_user_path(user), class: "text-decoration-none text-danger", data: { turbo_confirm: 'Sei sicuro di voler eliminare questo utente?', turbo_method: :delete } do %>
+     <i class="fa-solid fa-trash" title="Elimina"></i>
+    <% end %>
+  </td>
+</tr>

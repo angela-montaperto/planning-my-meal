@@ -1,0 +1,174 @@
+it:
+  date:
+    abbr_day_names:
+      - dom
+      - lun
+      - mar
+      - mer
+      - gio
+      - ven
+      - sab
+    abbr_month_names:
+      -
+      - gen
+      - feb
+      - mar
+      - apr
+      - mag
+      - giu
+      - lug
+      - ago
+      - set
+      - ott
+      - nov
+      - dic
+    day_names:
+      - domenica
+      - lunedì
+      - martedì
+      - mercoledì
+      - giovedì
+      - venerdì
+      - sabato
+    formats:
+      default: "%d/%m/%Y"
+      long: "%d %b %Y"
+      very_long: "%d %B %Y"
+      short: "%d %b"
+      date_time: "%d %B %Y - %H:%M"
+    month_names:
+      -
+      - gennaio
+      - febbraio
+      - marzo
+      - aprile
+      - maggio
+      - giugno
+      - luglio
+      - agosto
+      - settembre
+      - ottobre
+      - novembre
+      - dicembre
+    order:
+      - :day
+      - :month
+      - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: circa un'ora
+        other: circa %{count} ore
+      about_x_months:
+        one: circa un mese
+        other: circa %{count} mesi
+      about_x_years:
+        one: circa un anno
+        other: circa %{count} anni
+      almost_x_years:
+        one: circa 1 anno
+        other: circa %{count} anni
+      half_a_minute: mezzo minuto
+      less_than_x_minutes:
+        one: meno di un minuto
+        other: meno di %{count} minuti
+      less_than_x_seconds:
+        one: meno di un secondo
+        other: meno di %{count} secondi
+      over_x_years:
+        one: oltre un anno
+        other: oltre %{count} anni
+      x_days:
+        one: 1 giorno
+        other: "%{count} giorni"
+      x_minutes:
+        one: 1 minuto
+        other: "%{count} minuti"
+      x_months:
+        one: 1 mese
+        other: "%{count} mesi"
+      x_years:
+        one: 1 anno
+        other: "%{count} anni"
+      x_seconds:
+        one: 1 secondo
+        other: "%{count} secondi"
+    prompts:
+      day: Giorno
+      hour: Ora
+      minute: Minuto
+      month: Mese
+      second: Secondi
+      year: Anno
+  time:
+    am: am
+    formats:
+      default: "%a %d %b %Y, %H:%M:%S %z"
+      long: "%d %B %Y %H:%M"
+      short: "%d %b %Y - %H:%M"
+      time_only: "%H:%M"
+      date_time: "%d/%m/%Y - %H:%M"
+      only_date: "%d %B %Y"
+    pm: pm
+  labels:
+    login: Accedi
+    signup: Registrati
+    search: Cerca
+    cancel: Cancella
+    new: Nuovo
+    destroy: Elimina
+    modify: Modifica
+    edit: Modifica
+    back: Indietro
+    profile: Profilo
+    exit: Esci
+    save: Salva
+    record_created: Record creato
+    record_modified: Campo modificato
+    record_destroyed: Campo eliminato
+    error_record_created: Errore nella creazione del campo
+    error_record_modified: Errore nella modifica del campo
+    error_record_destroyed: Errore nella cancellazione del campo
+    confirm_delete: Sei sicuro di voler eliminare questo record?
+    survey_created: Grazie per aver partecipato e per aver compilato il questionario. Nelle prossime ore riceverà l'attestato di partecipazione all'indirizzo mail inserito in fase di registrazione
+    error_survey_created: Errore nella creazione della la survey di customer satisfaction
+    survey_already_filled: Grazie per la partecipazione, hai già compilato il questionario
+    survey_disabled: La survey di customer satisfaction non è aperta per la partecipazione.
+    answer_created: Risposta registrata
+    answer_error: Errore nella creazione della risposta
+    send_message: Invia messaggio
+    home: Home
+    users: Utenti
+    site: Sito
+    filter: Filtra
+    find_for: 'Cerca per '
+    clear: Pulisci
+    uploaded_at: Caricato il
+    enable: abilita
+    disable: disabilita
+    admin_panel: Amministrazione
+  pages:
+    home: Home
+    contact: Contatti
+  helpers:
+    select:
+      prompt: Nessuna selezione
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "Nessun &nbsprisultato&nbsp trovato"
+          one: "Trovato &nbsp<b>1</b>&nbsp %{entry_name}"
+          other: "Trovati &nbsp<b>%{count}</b>&nbsp %{entry_name}"
+      more_pages:
+        display_entries: "Trovato %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> di <b>%{total}</b> in totale"
+  views:
+    pagination:
+      first: "&laquo;"
+      last: "&raquo;"
+      previous: "&lsaquo;"
+      next: "&rsaquo;"
+      truncate: "&hellip;"
+  registration: registrazione
+
+
+

@@ -1,0 +1,37 @@
+<button class="btn btn-primary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFinder" aria-expanded="false" aria-controls="collapseFinder">
+  Cerca utente
+</button>
+<%= link_to "Nuovo utente", new_admin_user_path,  class: "btn btn-primary mb-3" %>
+<div class="collapse box mb-3" id="collapseFinder">
+  <%= search_form_for @q, url: admin_users_path, html: { role: 'search', id: 'search-box' } do |f| %>
+    <div class="mb-3">
+      <%= f.label ["Cerca per " + User.human_attribute_name(:name), User.human_attribute_name(:surname), User.human_attribute_name(:email)].join(', '), class: 'form-label' %>
+      <%= f.search_field :name_or_surname_or_email_cont, class: 'form-control' %>
+    </div>
+
+    <div class="d-flex justify-content-end">
+      <%= link_to t('labels.cancel'), request.path, class: 'btn btn-link' %>
+      <%= f.submit t('labels.search'), class: 'btn btn-primary' %>
+  <% end %>
+  </div>
+</div>
+
+<%- if @users.any? -%>
+  <table class="table mb-3 table-striped">
+    <thead>
+    <tr>
+      <th></th>
+      <th class="sorting"><%= sort_link(@q, :name, User.human_attribute_name(:name), {}, {class: "text-dark"}) %></th>
+      <th class="sorting"><%= sort_link(@q, :surname, User.human_attribute_name(:surname), {}, {class: "text-dark"}) %></th>
+      <th class="sorting"><%= sort_link(@q, :email, {}, {class: "text-dark"}) %></th>
+      <th class="sorting"><%= sort_link(@q, :role, {}, {class: "text-dark"}) %></th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <%= render @users %>
+    </tbody>
+  </table>
+  <%= paginate @users, params: {records: @users} %>
+
+<%- end -%>

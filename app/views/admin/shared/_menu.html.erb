@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg bg-light navigation-bar mb-3">
+  <div class="container container-fluid">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <%= link_to "Pannello di controllo", admin_root_path, class: "nav-link #{selected_menu([admin_root_path], {start_with: true})} " if policy(User).index? %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Utenti", admin_users_path, class: "nav-link #{selected_menu([admin_users_path], {start_with: true})} " if policy(User).index? %>
+        </li>
+          <li class="nav-item">
+          <%= link_to FoodGroup.model_name.human , admin_food_groups_path, class: "nav-link #{selected_menu([admin_food_groups_path], {start_with: true})} " if policy(FoodGroup).index? %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Sito", root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to t("labels.exit"), destroy_user_session_path, class: "nav-link", data: { turbo_method: :delete } %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

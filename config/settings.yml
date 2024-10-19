@@ -1,0 +1,4 @@
+default:
+  site_name: "Planning my meal"
+user:
+  password_expiration_days: 365

@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db_planning_my_meal:
+    image: mysql:5.7.30
+    platform: linux/x86_64
+    container_name: db_planning_my_meal
+    ports:
+      - "3060:3306"
+    volumes:
+      - ~/docker_mysql/planning_my_meal:/var/lib/mysql/
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
+      MYSQL_ROOT_PASSWORD: ""

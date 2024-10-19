@@ -1,0 +1,13 @@
+<tr class="align-middle">
+  <td><%= food_group.group_name %></td>
+  <td><%= food_group.name %></td>
+  <td><%= food_group.code %></td>
+  <td>
+    <%= link_to edit_admin_food_group_path(food_group), class: "text-decoration-none text-primary me-2" do %>
+    <i class="fa-solid fa-pen-to-square" title="Modifica"></i>
+    <% end %>
+    <%= link_to admin_food_group_path(food_group), class: "text-decoration-none text-danger", data: { turbo_confirm: 'Sei sicuro di voler eliminare questo gruppo ?', turbo_method: :delete } do %>
+     <i class="fa-solid fa-trash" title="Elimina"></i>
+    <% end %>
+  </td>
+</tr>

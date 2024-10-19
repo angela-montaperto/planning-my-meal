@@ -1,0 +1,31 @@
+<%= link_to "Nuovo Gruppo", new_admin_food_group_path, class: "btn btn-primary mb-3" %>
+<div class="collapse box mb-3" id="collapseFinder">
+  <%= search_form_for @q, url: admin_food_groups_path, html: { role: 'search', id: 'search-box' } do |f| %>
+    <div class="mb-3">
+      <%= f.label ["Cerca per " + FoodGroup.human_attribute_name(:group_name), FoodGroup.human_attribute_name(:name), FoodGroup.human_attribute_name(:code)].join(', '), class: 'form-label' %>
+      <%= f.search_field :group_name_or_name_or_code_cont, class: 'form-control' %>
+    </div>
+
+    <div class="d-flex justify-content-end">
+      <%= link_to t('labels.cancel'), request.path, class: 'btn btn-link' %>
+      <%= f.submit t('labels.search'), class: 'btn btn-primary' %>
+  <% end %>
+  </div>
+</div>
+
+<%- if @food_groups.any? -%>
+  <table class="table mb-3 table-striped">
+    <thead>
+    <tr>
+      <th class="sorting"><%= sort_link(@q, :group_name, FoodGroup.human_attribute_name(:group_name), {}, {class: "text-dark"}) %></th>
+      <th class="sorting"><%= sort_link(@q, :name, FoodGroup.human_attribute_name(:name), {}, {class: "text-dark"}) %></th>
+      <th class="sorting"><%= sort_link(@q, :code, FoodGroup.human_attribute_name(:code), {}, {class: "text-dark"}) %></th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <%= render @food_groups %>
+    </tbody>
+  </table>
+  <%= paginate @food_groups, params: {records: @food_groups} %>
+<%- end -%>

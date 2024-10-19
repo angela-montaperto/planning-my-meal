@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <title><%= Settings.default.site_name %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "admin", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="mt-0 pt-0" id="admin-body">
+    <%= render partial: "admin/shared/menu" %>
+    <div class="container">
+      <turbo-frame id="flash">
+        <%= render partial: 'admin/shared/notices' %>
+      </turbo-frame>
+        <%= yield :title %>
+        <%= yield %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+it:
+  activerecord:
+    models:
+      user:
+        one: Utente
+        other: Utenti
+    attributes:
+      user:
+        name: Nome
+        surname: Cognome
+        remember_me: Remember me
+        password_confirmation: Conferma password
+        current_password: Password corrente
+        confirmation_token: Token
+        role: Ruolo
+        email: Email
+        active: Attivo
+        reset_password_sent_at: Reset password mandata
+        unconfirmed_email: Mail non confermata
+        confirmed_at: Confermato il
+        last_sign_in_at: Ultimo login
+        created_at: Creato il
+        updated_at: Modificato il
+        confirmation_sent_at: Conferma mail inviata
+        connected_at: Connesso
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              too_short: 'troppo corta, usa almeno %{count} caratteri'
+              blank: obbligatorio
+            password_confirmation:
+              confirmation: non corrispondente
+              blank: obbligatorio
+            email:
+              blank: obbligatorio
+              taken: già utilizzata
+              invalid: formato non valido
+              required: obbligatorio
+            surname:
+              blank: obbligatorio
+              taken: già utilizzata
+              invalid: formato non valido
+              required: obbligatorio
+            name:
+              blank: obbligatorio
+              taken: già utilizzata
+              invalid: formato non valido
+              required: obbligatorio
+            current_password:
+              blank: obbligatorio
+              taken: già utilizzata
+              invalid: non valido
+              required: obbligatorio
+            confirmation_token:
+              blank: obbligatorio
+              taken: già utilizzata
+              invalid: non valido
+              required: obbligatorio
+            reset_password_token:
+              invalid: non valido
