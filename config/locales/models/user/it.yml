@@ -60,3 +60,8 @@ it:
               required: obbligatorio
             reset_password_token:
               invalid: non valido
+            privacy:
+              blank: obbligatorio
+              invalid: non valido
+              required: obbligatorio
+              accepted: obbligatorio

@@ -1,5 +1,4 @@
-class User::PasswordsController < Devise::PasswordsController
-
+class Users::PasswordsController < Devise::PasswordsController
   def update
     super
     unless current_user.nil?

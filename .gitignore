@@ -4,48 +4,55 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+.idea/*
+.DS_Store
+
 # Ignore bundler config.
 /.bundle
-
-# Ignore all environment files (except templates).
-/.env*
-!/.env*.erb
+/.ruby-gemset
+/.ruby-version
+/.python-version
 
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
+/tmp/*/*
 !/log/.keep
 !/tmp/.keep
 
-# Ignore pidfiles, but keep the directory.
-/tmp/pids/*
-!/tmp/pids/
-!/tmp/pids/.keep
+/node_modules
+/yarn-error.log
 
-# Ignore storage (uploaded files in development and any SQLite databases).
+/public/assets
+.byebug_history
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+/config/database.yml
+
+/public/uploads
+!/public/uploads/.keep
+/public/video/*
+/public/development
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
+VERSION
+
+# Private uploaded files
+/data/files
+data/*
+vendor/cache/*
+.log/*
+/spec/last_run_results.txt
+/coverage/
+
+/private_uploads/
+
+# Ignore uploaded files in development.
 /storage/*
 !/storage/.keep
 /tmp/storage/*
 !/tmp/storage/
 !/tmp/storage/.keep
-
-/public/assets
-
-# Ignore master key for decrypting credentials and more.
-/config/master.key
-
-/config/database.yml
-
-config/settings.local.yml
-config/settings/*.local.yml
-config/environments/*.local.yml
-
-/.ruby-gemset
-/.ruby-version
-/.vscode
-/.idea
-
-data/*
-public/uploads/*
-
-package-lock.json
